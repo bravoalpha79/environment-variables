@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=Numbers, initial-scale=1.0">
+    <title>Flask app</title>
+</head>
+<body>
+    <h2>Our Flask app</h2>
+    <hr><br>
+
+    <div id="flashes">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <h6 class="message">{{message}}</h6>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+    <hr><br><br>
+    
+    {% block content %}
+    {% endblock %}
+    
+</body>
+</html>

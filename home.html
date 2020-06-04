@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <div>
+        <h5>Send message</h5>
+        <form action="{{url_for('send')}}" method="POST">
+            <input id="mycontent" type="text" name="content" placeholder="Enter text" required><br>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+{% endblock %}
