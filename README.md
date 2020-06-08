@@ -1,5 +1,5 @@
 # How to set up Python environment variables in Gitpod
-## (an option)
+## Option 1 - env.py
 
 
 1. In the root of your project (where your app's main Python file is - e.g. `app.py` for Flask, `manage.py` for Django), create a file named **env.py**.
@@ -95,3 +95,43 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 ```
+
+
+
+## Option 2 - Workspaces Dashboard Settings
+
+1. In your Gitpod workspace, click on the Gitpod button.
+
+    ![Gitpod button](screenshots/Button.png)
+
+2. In the Workspaces Dashboard, click on your GitHub avatar.
+
+    ![Workspaces Dashboard](screenshots/Workspaces.png)
+
+3. In the resulting dropdown menu, click on Settings.
+
+    ![Menu](screenshots/Menu.png)
+
+4. Under Environment Variables, click on the Add icon in the bottom right corner.
+
+    ![Add](screenshots/Add.png)
+
+5. Enter the Name and the Value for your environment variable. 
+
+    ![Enter](screenshots/Enter.png)
+
+6. Click the Checkmark icon to set the variable.
+
+    ![Enter](screenshots/Save.png)
+
+
+*** **For additional environment variables, repeat steps 4-6 for each variable.** ***  
+
+
+7. Click on Workspaces to return to the Workspaces Dashboard.
+
+    ![Return](screenshots/Return.png)
+
+8. Click Open to return to your running workspace.
+
+    ![Worskpace](screenshots/Running.png)
