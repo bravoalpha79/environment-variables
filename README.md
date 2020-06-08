@@ -1,5 +1,5 @@
 # How to set up Python environment variables in Gitpod
-## Option 1 - env.py
+## Option 1 - env.py file
 
 
 1. In the root of your project (where your app's main Python file is - e.g. `app.py` for Flask, `manage.py` for Django), create a file named **env.py**.
@@ -36,7 +36,7 @@
     ```
 
 5. In your Flask app, set up your app-specific variables according to the app syntax.    
- To set their **values**, use the following syntax   
+ To set each variable's **value**, use the following syntax   
     ```
     ... = os.environ.get("VARIABLE_NAME")
     ```   
@@ -54,7 +54,7 @@
 _You are now ready to use the app with your custom environment variables, and you can Git-commit and push to GitHub without fear of disclosing your sensitive app data._
 
 
-***
+
 ***   
    
 **Note for Django (Full-Stack Frameworks students)**:   
@@ -96,7 +96,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get("SECRET_KEY")
 ```
 
-
+***
+***
 
 ## Option 2 - Workspaces Dashboard Settings
 
@@ -135,3 +136,30 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 8. Click Open to return to your running workspace.
 
     ![Worskpace](screenshots/Running.png)
+
+9. In your Flask app's .py file or in your Django settings.py file, set up your app-specific variables according to the app/framework syntax.    
+ To set a variable's **value**, use the following syntax   
+    ```
+    ... = os.environ.get("VARIABLE_NAME")
+    ```   
+    For example:  
+
+    Flask:  
+    ```Python
+    app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+    app.secret_key = os.environ.get("SECRET_KEY")
+    ```
+
+    Django:  
+    ```Python
+    SECRET_KEY = os.environ.get("SECRET_KEY")
+    ```
+
+    **Important note**: The variable name in the **round** brackets - e.g. ("SECRET_KEY") - has to match **exactly** to the variable name as it was set in Gitpod Environment Variables.
+
+      Don't forget to save the file.
+
+
+_You are now ready to use the app with your custom environment variables, and you can Git-commit and push to GitHub without fear of disclosing your sensitive app data._
+
+***
