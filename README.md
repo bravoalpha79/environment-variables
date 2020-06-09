@@ -1,4 +1,14 @@
 # How to set up Python environment variables in Gitpod
+***
+
+**_Note: if want to use the repository code for practice, when you open it in Gitpod, use the following command to install all the required dependencies:_**
+
+**`pip3 install -r requirements.txt`**
+
+**_This will install_ Flask, Pymongo, Flask-Pymongo _and_ dnspython _to your workspace and you will be able to use the app like you saw in the call._**
+
+***
+
 ## Option 1 - env.py file
 
 
