@@ -3,8 +3,15 @@
     <div>
         <h5>Send message</h5>
         <form action="{{url_for('send')}}" method="POST">
-            <input id="mycontent" type="text" name="content" placeholder="Enter text" required><br>
+            <input id="mycontent" type="number" name="content" placeholder="Enter text" required><br>
             <button type="submit">Send</button>
         </form>
     </div>
+
+    <div>
+        {% for number in numbers %}
+            <h4>{{loop.index}}.   -----  {{number.number}}</h4>
+        {% endfor %}
+    </div>
+
 {% endblock %}
