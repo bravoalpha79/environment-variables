@@ -8,9 +8,7 @@
 **_This will install_ Flask, Pymongo, Flask-Pymongo _and_ dnspython _to your workspace and you will be able to use the app like you saw in the call._**
 
 ***
-
-## Option 1 - env.py file
-
+## Setting up environment variables using env.py file
 
 1. In the root of your project (where your app's main Python file is - e.g. `app.py` for Flask, `manage.py` for Django), create a file named **env.py**.
 2.  **If you don't have a .gitignore file yet, in the root of your project create .gitignore with app.py in it, using the following command in the Terminal:**   
@@ -109,67 +107,4 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 ***
 ***
 
-## Option 2 - Workspaces Dashboard Settings
 
-1. In your Gitpod workspace, click on the Gitpod button.
-
-    ![Gitpod button](screenshots/Button.png)
-
-2. In the Workspaces Dashboard, click on your GitHub avatar.
-
-    ![Workspaces Dashboard](screenshots/Workspaces.png)
-
-3. In the resulting dropdown menu, click on Settings.
-
-    ![Menu](screenshots/Menu.png)
-
-4. Under Environment Variables, click on the Add icon in the bottom right corner.
-
-    ![Add](screenshots/Add.png)
-
-5. Enter the Name and the Value for your environment variable. 
-
-    ![Enter](screenshots/Enter.png)
-
-6. Click the Checkmark icon to set the variable.
-
-    ![Enter](screenshots/Save.png)
-
-
-*** **For additional environment variables, repeat steps 4-6 for each variable.** ***  
-
-
-7. Click on Workspaces to return to the Workspaces Dashboard.
-
-    ![Return](screenshots/Return.png)
-
-8. Click Open to return to your running workspace.
-
-    ![Worskpace](screenshots/Running.png)
-
-9. In your Flask app's .py file or in your Django settings.py file, set up your app-specific variables according to the app/framework syntax.    
- To set a variable's **value**, use the following syntax   
-    ```
-    ... = os.environ.get("VARIABLE_NAME")
-    ```   
-    For example:  
-
-    Flask:  
-    ```Python
-    app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-    app.secret_key = os.environ.get("SECRET_KEY")
-    ```
-
-    Django:  
-    ```Python
-    SECRET_KEY = os.environ.get("SECRET_KEY")
-    ```
-
-    **Important note**: The variable name in the **round** brackets - e.g. ("SECRET_KEY") - has to match **exactly** to the variable name as it was set in Gitpod Environment Variables.
-
-      Don't forget to save the file.
-
-
-_You are now ready to use the app with your custom environment variables, and you can Git-commit and push to GitHub without fear of disclosing your sensitive app data._
-
-***
