@@ -14,7 +14,7 @@
 2.  **If you don't have a .gitignore file yet, in the root of your project create .gitignore with env.py in it, using the following command in the Terminal:**   
    `echo env.py > .gitignore`
 
-    **If you already have a .gitignore file, add app.py to it and save the file.**  
+    **If you already have a .gitignore file, add env.py to it and save the file.**  
 3. In the newly-created env.py, add the following:
     ```Python
     import os 
