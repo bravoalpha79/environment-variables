@@ -11,7 +11,7 @@
 ## Setting up environment variables using env.py file
 
 1. In the root of your project (where your app's main Python file is - e.g. `app.py` for Flask, `manage.py` for Django), create a file named **env.py**.
-2.  **If you don't have a .gitignore file yet, in the root of your project create .gitignore with app.py in it, using the following command in the Terminal:**   
+2.  **If you don't have a .gitignore file yet, in the root of your project create .gitignore with env.py in it, using the following command in the Terminal:**   
    `echo env.py > .gitignore`
 
     **If you already have a .gitignore file, add app.py to it and save the file.**  
