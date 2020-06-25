@@ -1,21 +1,17 @@
 import os
 from flask import Flask, render_template, request, flash
 from flask_pymongo import PyMongo
-
 if os.path.exists("env.py"):
     import env
 
 
 app = Flask(__name__)
 
-
-app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DB_NAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
-
 
 @app.route("/")
 def home():
@@ -27,7 +23,7 @@ def send():
     if request.method == "POST":
         content = int(request.form.get("content"))
         mongo.db.Numbers.insert_one({"number": content})
-        flash(f"Number '{content}' has been successfully inserted!")
+        flash(f"Number '{content}' has been successfully inserted into the database!")
     return render_template("home.html", numbers=mongo.db.Numbers.find())
 
 

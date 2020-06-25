@@ -7,10 +7,9 @@
             <button type="submit">Send</button>
         </form>
     </div>
-
     <div>
         {% for number in numbers %}
-            <h4>{{loop.index}}.   -----  {{number.number}}</h4>
+            <h4>{{ loop.index }} ---- {{ number.number }}</h4>
         {% endfor %}
     </div>
 
